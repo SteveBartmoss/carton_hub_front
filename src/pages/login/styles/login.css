@@ -1,0 +1,430 @@
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.85fr);
+  grid-template-rows: 1fr auto;
+  background:
+    radial-gradient(ellipse at 15% 15%, #1c1740 0%, transparent 42%),
+    var(--bg);
+}
+
+.login-hero {
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  padding: 64px clamp(32px, 6vw, 100px);
+  background:
+    linear-gradient(90deg, rgba(6, 9, 17, 0.35), #080b12 100%),
+    url("../assets/cardforge-hero.png") center / cover no-repeat;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 560px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.brand > span:last-child > span {
+  color: #8970ff;
+}
+
+.brand-icon {
+  color: #a38aff;
+  font-size: 44px;
+}
+
+.brand-tagline {
+  margin-top: 14px;
+  color: #c4cce0;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.hero-message {
+  margin-top: clamp(65px, 12vh, 130px);
+}
+
+.hero-message h1 {
+  margin: 0;
+  font-size: clamp(38px, 4vw, 57px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.hero-message h1 span {
+  color: #9a70ff;
+}
+
+.hero-message > p {
+  max-width: 410px;
+  margin-top: 28px;
+  color: #bdc7dc;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-features {
+  display: flex;
+  gap: clamp(20px, 3vw, 45px);
+  margin-top: 55px;
+}
+
+.hero-features article {
+  min-width: 0;
+}
+
+.feature-icon {
+  color: #8e79ff;
+  font-size: 29px;
+}
+
+.hero-features p {
+  color: #c0c9dc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.login-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px clamp(24px, 4vw, 64px);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  padding: clamp(28px, 3.5vw, 48px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(8, 13, 22, 0.92);
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.2);
+}
+
+.form-header h2 {
+  margin: 0;
+  font-size: clamp(25px, 2.3vw, 32px);
+  letter-spacing: -1px;
+}
+
+.form-header p {
+  margin: 12px 0 36px;
+  color: #b5c1d5;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.form-field {
+  margin-bottom: 24px;
+}
+
+.form-field > label {
+  display: block;
+  margin-bottom: 11px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-field > input,
+.password-wrapper {
+  width: 100%;
+  height: 54px;
+  border: 1px solid #354157;
+  border-radius: 8px;
+  background: #090e18;
+}
+
+.form-field > input,
+.password-wrapper input {
+  padding: 0 16px;
+  color: var(--text);
+}
+
+.form-field > input {
+  width: 100%;
+  height: 54px;
+}
+
+.form-field input::placeholder {
+  color: #74839d;
+}
+
+.form-field input:focus {
+  border-color: #8270ff;
+  outline: none;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+
+.password-toggle {
+  margin-right: 12px;
+  padding: 6px;
+  border: 0;
+  background: transparent;
+  color: #aab7cf;
+  font-size: 12px;
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: -4px 0 28px;
+  font-size: 12px;
+}
+
+.remember-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b1bfd4;
+}
+
+.remember-option input {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+}
+
+.form-options > a,
+.register-prompt a {
+  color: #8c7aff;
+}
+
+.form-options > a:hover,
+.register-prompt a:hover {
+  color: #b09dff;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 54px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #5a50ff, #7952f6);
+  color: white;
+  font-weight: 700;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.login-button:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.login-button span {
+  font-size: 20px;
+}
+
+.form-error {
+  margin: -12px 0 18px;
+  color: #ff858f;
+  font-size: 13px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 32px 0 24px;
+  color: #a8b4c9;
+  font-size: 12px;
+}
+
+.separator::before,
+.separator::after {
+  flex: 1;
+  height: 1px;
+  background: #303b4e;
+  content: "";
+}
+
+.social-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  height: 48px;
+  border: 1px solid #354157;
+  border-radius: 8px;
+  background: transparent;
+  color: #f2f4fa;
+  font-size: 12px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.social-button:hover {
+  border-color: #8070ff;
+  background: #17172b;
+}
+
+.social-icon {
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.social-icon.google {
+  color: #7eabff;
+}
+
+.social-icon.discord {
+  color: #9b8aff;
+}
+
+.social-icon.steam {
+  color: #d5deef;
+}
+
+.register-prompt {
+  margin: 34px 0 0;
+  color: #aab7cc;
+  text-align: center;
+  font-size: 12px;
+}
+
+.register-prompt a {
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.login-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 76px;
+  padding: 18px 6%;
+  border-top: 1px solid #263044;
+  color: #91a0ba;
+  font-size: 12px;
+}
+
+.login-footer span:first-child {
+  color: #e8eaf4;
+  font-weight: 700;
+}
+
+.footer-divider {
+  color: #45516a;
+}
+
+@media (max-width: 1000px) {
+  .login-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .login-hero {
+    min-height: auto;
+    padding: 42px 32px;
+    background:
+      linear-gradient(90deg, rgba(6, 9, 17, 0.8), #080b12),
+      url("../assets/cardforge-hero.png") center 35% / cover no-repeat;
+  }
+
+  .hero-message {
+    margin-top: 50px;
+  }
+
+  .hero-features {
+    margin-top: 30px;
+  }
+
+  .login-content {
+    padding: 35px 20px 55px;
+  }
+
+  .login-card {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-hero {
+    padding: 30px 22px;
+  }
+
+  .brand {
+    font-size: 29px;
+  }
+
+  .brand-tagline {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .hero-message {
+    margin-top: 40px;
+  }
+
+  .hero-message h1 {
+    font-size: 39px;
+  }
+
+  .hero-message > p {
+    font-size: 14px;
+  }
+
+  .hero-features {
+    gap: 15px;
+  }
+
+  .hero-features p {
+    font-size: 11px;
+  }
+
+  .login-content {
+    padding: 20px 14px 35px;
+  }
+
+  .login-card {
+    padding: 26px 20px;
+  }
+
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .social-button {
+    justify-content: center;
+  }
+
+  .login-footer {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px 22px;
+  }
+}
