@@ -1,9 +1,9 @@
 
-import "../styles/login.css";
-import LoginHero from "../components/auth/LoginHero";
-import LoginForm from "../components/auth/LoginForm";
+import { LoginForm } from "./LoginForm";
+import { LoginHero } from "./LoginHero";
+import "./styles/login.css";
 
-export default function LoginPage() {
+export function Login() {
   return (
     <main className="login-page">
       <section className="login-hero">
@@ -15,7 +15,7 @@ export default function LoginPage() {
       </section>
 
       <footer className="login-footer">
-        <span>♧ CardForge</span>
+        <span>♧ Carton Hub</span>
         <span className="footer-divider">|</span>
         <span>El lugar de los verdaderos coleccionistas</span>
       </footer>
