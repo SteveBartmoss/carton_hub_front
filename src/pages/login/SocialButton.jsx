@@ -5,7 +5,7 @@ const providers = [
   { name: "Steam", icon: "◈" },
 ];
 
-export default function SocialLoginButtons() {
+export function SocialButtons() {
   return (
     <div className="social-buttons">
       {providers.map((provider) => (
