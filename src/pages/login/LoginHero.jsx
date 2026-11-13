@@ -1,10 +1,10 @@
 
-export default function LoginHero() {
+export function LoginHero() {
   return (
     <div className="hero-content">
       <a className="brand" href="/">
         <span className="brand-icon">♧</span>
-        <span>Card<span>Forge</span></span>
+        <span>Carton<span>Hub</span></span>
       </a>
 
       <p className="brand-tagline">
